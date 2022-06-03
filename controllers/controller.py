@@ -1,5 +1,5 @@
-from crypt import methods
-from flask import redirect, render_template, request
+import random
+from flask import render_template, request
 
 from app import app
 
@@ -26,3 +26,12 @@ def game_play():
 @app.route('/player_vs_ai')
 def player_vs_ai():
     return render_template("player_vs_ai.html")
+
+@app.route('/winner2', methods=['POST'])
+def ai_vs_homan():
+    choices = ["Rock", "Paper", "Scissors"]
+    homan = Player("Homan", request.form["homan_choice"])
+    sushi = Player("Sushi 2.0", random.choice(choices))
+    players = [homan, sushi]
+    winner = Game.gameplay(players)
+    return render_template("winner2.html", winner=winner)

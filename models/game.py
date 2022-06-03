@@ -5,15 +5,24 @@ class Game:
     def gameplay(players):
         if players[0].choice == players[1].choice:
             return None
-        if players[0].choice == "Paper" and players[1].choice == "Rock":
-            return players[0].name
-        if players[0].choice == "Rock" and players[1].choice == "Scissors":
-            return players[0].name
-        if players[0].choice == "Scissors" and players[1].choice == "Paper":
-            return players[0].name
-        else:
-            return players[1].name
         
+        if players[0].choice == "Paper" and players[1].choice == "Rock":
+            return f"{players[0].name} has won Paper beats Rock"
+        
+        if players[0].choice == "Rock" and players[1].choice == "Scissors":
+            return f"{players[0].name} has won Rock beats Scissors"
+        
+        if players[0].choice == "Scissors" and players[1].choice == "Paper":
+            return f"{players[0].name} has won Scissors beats Paper"
+        
+        if players[1].choice == "Paper" and players[0].choice == "Rock":
+            return f"{players[1].name} has won Paper beats Rock"
+        
+        if players[1].choice == "Rock" and players[0].choice == "Scissors":
+            return f"{players[1].name} has won Rock beats Scissors"
+        
+        if players[1].choice == "Scissors" and players[0].choice == "Paper":
+            f"{players[1].name} has won Scissors beats Paper"
 
 
 

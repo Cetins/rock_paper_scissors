@@ -1,6 +1,36 @@
 {% extends "base.html" %}
+
+
 {% block content %}
 
-<h1>Player vs AI work in progress</h1>
+<h1>Player vs AI</h1>
+
+<h2>Here you'll compete against our vastly developed AI, Sushi 2.0</h2>
+<h3>Be careful, Suhsi is talented and handful</h3>
+
+<form action="/winner2" method="post">
+    <h2>Homan</h2>
+    <br>
+    <label for="{Homan.choice}">Pick your choice:</label>
+    <select name="homan_choice" required>
+        <option value="Rock">Rock</option>
+        <option value="Paper">Paper</option>
+        <option value="Scissors">Scissors</option>
+    </select>
+
+    <h2>Sushi 2.0</h2>
+    <br>
+    <img src="/static/images/cat.jpg" alt="Sushi 2.0" width="200px">
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
 
 {% endblock %}
+
+
+
+
+
+
+Photo by Isabella and Zsa Fischer on Unsplash
