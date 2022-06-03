@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Two Players</h1>
+
+<form action="/winner" method="post">
+    <h2>Player1</h2>
+    <br>
+    <label for="{player1.choice}">Pick your choice:</label>
+    <select name="choice1" required>
+        <option value="Rock">Rock</option>
+        <option value="Paper">Paper</option>
+        <option value="Scissors">Scissors</option>
+    </select>
+
+    <h2>Player2</h2>
+    <br>
+    <label for="{player2.choice}">Pick your choice:</label>
+    <select name="choice2" required>
+        <option value="Rock">Rock</option>
+        <option value="Paper">Paper</option>
+        <option value="Scissors">Scissors</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
