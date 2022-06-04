@@ -3,27 +3,39 @@
 
 {% block content %}
 
-<h1>Player vs AI</h1>
-
-<h2>Here you'll compete against our vastly developed AI, Sushi 2.0</h2>
-<h3>Be careful, Suhsi is talented and handful</h3>
+<div class="sub-title">
+    <h1>Player vs AI</h1>
+    <h2>Here you'll compete against our vastly developed AI, Sushi 2.0</h2>
+    <h3>Be careful, Suhsi is talented and handful</h3>
+</div>
 
 <form action="/winner2" method="post">
-    <h2>Homan</h2>
-    <br>
-    <label for="{Homan.choice}">Pick your choice:</label>
-    <select name="homan_choice" required>
-        <option value="Rock">Rock</option>
-        <option value="Paper">Paper</option>
-        <option value="Scissors">Scissors</option>
-    </select>
 
-    <h2>Sushi 2.0</h2>
-    <br>
-    <img src="/static/images/cat.jpg" alt="Sushi 2.0" width="200px">
-    <br><br>
+    <section class="parent">
+        <section class="child">
+            <h2>Homan</h2>
+            <br>
+            <img src="/static/images/placeholder-avatar.png" alt="Homan avatar" width="200px"><br>
+            <label for="{Homan.choice}">Pick your choice:</label>
+            <select name="homan_choice" required>
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
+            </select>
+        </section>
+    
+        <section class="child">
+            <h2>Sushi 2.0</h2>
+            <br>
+            <img src="/static/images/cat.jpg" alt="Sushi 2.0" width="200px">
+            <br><br>
+        </section>
+    </section>
 
-    <input type="submit" value="Submit">
+    <div class="parent">
+        <input class="submit-button child" type="submit" value="Submit">
+    </div>
+    
 </form>
 
 {% endblock %}

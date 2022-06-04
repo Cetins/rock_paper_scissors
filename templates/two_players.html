@@ -2,29 +2,43 @@
 
 {% block content %}
 
-<h1>Two Players</h1>
+<div class="sub-title">
+    <h1>Two Players</h1>
+</div>
 
 <form action="/winner" method="post">
-    <h2>Player1</h2>
-    <br>
-    <label for="{player1.choice}">Pick your choice:</label>
-    <select name="choice1" required>
-        <option value="Rock">Rock</option>
-        <option value="Paper">Paper</option>
-        <option value="Scissors">Scissors</option>
-    </select>
+    <section class="parent">
+        <section class="child">
+            <h2>Player1</h2>
+            <br>
+            <img src="/static/images/placeholder-avatar.png" alt="Homan avatar" width="200px"><br>
+            <br>
+            <label for="{player1.choice}">Pick your choice:</label>
+            <select name="choice1" required>
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
+            </select>
+        </section>
 
-    <h2>Player2</h2>
-    <br>
-    <label for="{player2.choice}">Pick your choice:</label>
-    <select name="choice2" required>
-        <option value="Rock">Rock</option>
-        <option value="Paper">Paper</option>
-        <option value="Scissors">Scissors</option>
-    </select>
-    <br><br>
+        <section class="child">
+            <h2>Player2</h2>
+            <br>
+            <img src="/static/images/placeholder-avatar.png" alt="Homan avatar" width="200px"><br>
+            <br>
+            <label class="label" for="{player2.choice}">Pick your choice:</label>
+            <select name="choice2" required>
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
+            </select>
+            <br><br>
+        </section>
+    </section>
 
-    <input type="submit" value="Submit">
+    <div class="parent">
+        <input class="submit-button child" type="submit" value="Submit">
+    </div>
 </form>
 
 {% endblock %}

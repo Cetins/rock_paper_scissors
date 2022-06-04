@@ -1,0 +1,101 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav>ul>li>a, .play-again>a {
+    text-decoration: none;
+    color: white;
+    padding-right: 1rem;
+}
+
+nav>ul>li>a:hover, .play-again>a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+
+.sub-title {
+    display: grid ;
+    background-color: #53826e;
+}
+.sub-title>h1 , .sub-title>h2, .sub-title>h3{
+    padding: 1rem 2rem;
+}
+
+.main {
+    display: grid ;
+    padding: 3rem;
+}
+
+.main>h2 {
+    padding: 0;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.child {
+    flex: 0 1 300px;
+    flex: 1 1 300px;
+    border: 1px solid rgb(143, 139, 97);
+    background: rgb(210, 204, 140);
+    font-size: 2rem;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+}
+
+select {
+    margin: 2rem 0;
+}
+
+.submit-button {
+    background: #53826e;
+    height: 3rem;
+    width: 6rem;
+    margin: 2rem;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10vh;
+    background: #40516f;
+    color: white;
+}
+
+.play-again {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #40516f;
+    border: 2px solid black;
+    height: 3rem;
+    width: 8rem;
+    margin: 2rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    background: #1e1e2b;
+    color: white;
+}

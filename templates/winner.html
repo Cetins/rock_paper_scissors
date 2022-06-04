@@ -3,9 +3,17 @@
 {% block content %}
 
 {% if winner == None %}
+<div class="sub-title">
     <h3>It's a draw!!</h3>
-    {% else %}
+</div>
+{% else %}
+<div class="sub-title">
     <h3>{{winner}}</h3>
-    {% endif %}
+</div>
+{% endif %}
+
+<div class="play-again">
+    <a href="/two_players">Play Again</a>
+</div>
 
 {% endblock %}
