@@ -22,7 +22,7 @@ class Game:
             return f"{players[1].name} has won Rock beats Scissors"
         
         if players[1].choice == "Scissors" and players[0].choice == "Paper":
-            f"{players[1].name} has won Scissors beats Paper"
+            return f"{players[1].name} has won Scissors beats Paper"
 
 
 
